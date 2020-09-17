@@ -8,10 +8,26 @@
  * out = not in
  */
 
+ /**
+ * NOT truth table
+ * x | out
+ * 0 | 1
+ * 1 | 0
+ */
+
+  /**
+ * NAND truth table
+ * x | y | out
+ * 0 | 0 | 1 <-- 
+ * 1 | 0 | 1
+ * 0 | 1 | 1
+ * 1 | 1 | 0 <-- 
+ */
+
 CHIP Not {
     IN in;
     OUT out;
 
     PARTS:
-    // Put your code here:
+    Nand(a=in, b=in, out=out);
 }
